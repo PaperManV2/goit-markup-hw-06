@@ -386,33 +386,45 @@
           <button class="modalClose" data-modal-close><span>X</span></button>
           <h4 class="mainFormTitle">Zostaw swoje dane w formularzu poniżej</h4>
           <form name="mainSignUpForm" class="mainSignUpForm">
-            <label class="inputContainer">
+            <div class="inputContainer">
               Imie
-              <div class="optimizer">
+              <label class="optimizer">
+                <input class="textBoxInput" type="text" name="first_name"/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#personInBlack"></use>
                 </svg>
-              <input class="textBoxInput" type="text" name="first_name"/>
+              </label>
             </div>
-            </label>
-            <label class="inputContainer">
+            <div class="inputContainer">
               Telefon
-              <div class="optimizer">
+              <label class="optimizer">
+                <input class="textBoxInput" type="tel" name="Telephone"/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#phone"></use>
                 </svg>
-              <input class="textBoxInput" type="tel" name="Telephone"/>
-              </div>
-            </label >
-            <label class="inputContainer">
+              </label>
+            </div >
+            <div class="inputContainer">
               Email
-              <div class="optimizer">
+              <label class="optimizer">
+                <input class="textBoxInput" type="email" name="E-mail"/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#mail"></use>
                 </svg>
-              <input class="textBoxInput" type="email" name="E-mail"/>
+              </label>
             </div>
+            <div class="inputContainer">
+              Komentarz
+              <label class="optimizer">
+              <textarea 
+                resize="none"
+                class="textArea"
+                name="comment"
+                rows="5"
+                placeholder="Wprowadź tekst"
+              ></textarea>
             </label>
+            </div>
           </form>
         </div>
       </div>
