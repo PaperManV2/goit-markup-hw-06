@@ -369,12 +369,54 @@
           </a>
         </section>
       </div>
+      <section class="newsletter">
+        <span class="joinUsText">ZAPISZ SIĘ DO NEWSLETTERA</span>
+        <form class="newsletterForm" name="newsletterSignUpForm" >
+          <label>
+            <input class="input" type="email" name="email" placeholder="E-mail"/>
+          </label>
+          <button class="btnSend" type="submit">Zapisz się<svg class="svg" width="24px" height="24px">
+            <use href="images\svg\icons.svg#paperPlane"></use>
+          </svg></button>
+        </form>
+      </section>
     </footer>
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button class="modalClose" data-modal-close><span>X</span></button>
+          <h4 class="mainFormTitle">Zostaw swoje dane w formularzu poniżej</h4>
+          <form name="mainSignUpForm" class="mainSignUpForm">
+            <label class="inputContainer">
+              Imie
+              <div class="optimizer">
+                <svg class="svg" width="18px" height="18px">
+                  <use href="images\svg\icons.svg#personInBlack"></use>
+                </svg>
+              <input class="textBoxInput" type="text" name="first_name"/>
+            </div>
+            </label>
+            <label class="inputContainer">
+              Telefon
+              <div class="optimizer">
+                <svg class="svg" width="18px" height="18px">
+                  <use href="images\svg\icons.svg#phone"></use>
+                </svg>
+              <input class="textBoxInput" type="tel" name="Telephone"/>
+              </div>
+            </label >
+            <label class="inputContainer">
+              Email
+              <div class="optimizer">
+                <svg class="svg" width="18px" height="18px">
+                  <use href="images\svg\icons.svg#mail"></use>
+                </svg>
+              <input class="textBoxInput" type="email" name="E-mail"/>
+            </div>
+            </label>
+          </form>
         </div>
       </div>
     <script src="modal.js"></script>
   </body>
 </html>
+

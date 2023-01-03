@@ -9,6 +9,8 @@
   --line-color: #ececec;
   --social-media-color: #afb1b8;
   --social-media-icons-color: rgba(255, 255, 255, 0.1);
+  --newsletter-border-color: rgba(255, 255, 255, 0.3);
+  --main-form-label-color: rgba(33, 33, 33, 0.2);
 }
 
 * {
@@ -132,6 +134,10 @@ body {
 .bigAD .bigADBtn {
   width: 200px;
   height: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .bigAD .bigADTitle {
@@ -388,7 +394,8 @@ body {
   height: 252px;
   display: flex;
   gap: 70px;
-  padding-left: 365px;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
 }
 
@@ -397,7 +404,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 60px;
+}
+
+.socialmediaContainer,
+.newsletter {
+  margin-top: -30px;
 }
 
 .footer .socialmedia {
@@ -448,7 +459,6 @@ body {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  padding-top: 12px;
 }
 
 .listOfCategoryBtns {
@@ -654,6 +664,12 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .modalClose {
@@ -672,4 +688,119 @@ body {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
+}
+
+.newsletter {
+  width: 570px;
+  height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.newsletterForm .input {
+  border: 1px solid var(--newsletter-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 352px;
+  height: 48px;
+  padding: 0;
+  background: var(--background-color-dark);
+  padding-left: 16px;
+  color: var(--footer-Studio-text-color);
+}
+
+.newsletterForm .input::placeholder {
+  color: var(--newsletter-border-color);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+}
+
+.newsletterForm {
+  height: 50px;
+  width: 570px;
+  display: flex;
+  gap: 12px;
+}
+
+.btnSend {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--blue-text);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--footer-Studio-text-color);
+  cursor: pointer;
+}
+
+.mainFormTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mainSignUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.mainSignUpForm .textBoxInput {
+  display: flex;
+  flex-direction: column;
+  height: 54px;
+  width: 404px;
+  padding: 0;
+  border: 0;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+}
+
+.optimizer {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 56px;
+  width: 446px;
+  border: 1px solid var(--main-form-label-color);
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.optimizer > .textBoxInput:focus-within {
+  border-color: var(--blue-text);
+}
+
+.textBoxInput:focus-within {
+  outline: none;
+}
+
+.optimizer .svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.optimizer .svg > .textBoxInput:focus {
+  fill: var(--blue-text);
 }
