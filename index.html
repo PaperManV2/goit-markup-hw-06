@@ -373,7 +373,7 @@
         <span class="joinUsText">ZAPISZ SIĘ DO NEWSLETTERA</span>
         <form class="newsletterForm" name="newsletterSignUpForm" >
           <label>
-            <input class="input" type="email" name="email" placeholder="E-mail"/>
+            <input class="input" type="email" name="email" placeholder="E-mail" required />
           </label>
           <button class="btnSend" type="submit">Zapisz się<svg class="svg" width="24px" height="24px">
             <use href="images\svg\icons.svg#paperPlane"></use>
@@ -389,7 +389,7 @@
             <div class="inputContainer">
               Imie
               <label class="optimizer">
-                <input class="textBoxInput" type="text" name="first_name"/>
+                <input class="textBoxInput" type="text" name="first_name" required/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#personInBlack"></use>
                 </svg>
@@ -398,7 +398,8 @@
             <div class="inputContainer">
               Telefon
               <label class="optimizer">
-                <input class="textBoxInput" type="tel" name="Telephone"/>
+                <input class="textBoxInput" type="tel" name="Telephone" required
+                pattern="[0-9\]{3}-[0-9\]{3}-[0-9\]{3}"/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#phone"></use>
                 </svg>
@@ -407,7 +408,7 @@
             <div class="inputContainer">
               Email
               <label class="optimizer">
-                <input class="textBoxInput" type="email" name="E-mail"/>
+                <input class="textBoxInput" type="email" name="E-mail" required/>
                 <svg class="svg" width="18px" height="18px">
                   <use href="images\svg\icons.svg#mail"></use>
                 </svg>
@@ -432,6 +433,7 @@
                   type="checkbox"
                   name="term"
                   value="accepted"
+                  required
                 />
                 <div class="CustomCheckbox">
                   <svg class="OkaySvg" width="16" height="15">
